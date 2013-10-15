@@ -5,6 +5,8 @@ Use composer :)
 
 ```php
 
+<?php // server.php
+
 require "vendor/autoload.php";
 
 use Nicklasos\WebSocket;
@@ -47,3 +49,6 @@ $ws->on('message', function ($conn, $data) {
 $ws->setTimeout(1);
 $ws->run();
 ```
+
+```shell
+$ php server.php
