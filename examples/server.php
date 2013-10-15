@@ -2,7 +2,7 @@
 
 require "../vendor/autoload.php";
 
-use nicklasos\WebSocket;
+use Nicklasos\WebSocket;
 
 $ws = new WebSocket('localhost', 3030);
 

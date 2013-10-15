@@ -1,6 +1,6 @@
 <?php
 
-namespace nicklasos;
+namespace Nicklasos;
 
 class WebSocket
 {
