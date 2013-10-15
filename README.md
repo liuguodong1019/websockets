@@ -1,7 +1,7 @@
 #WebSockets
 
 ###Install:
-Use composer :)
+Use composer (https://packagist.org/packages/nicklasos/websockets)
 
 ```php
 
