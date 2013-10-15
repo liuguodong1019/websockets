@@ -1,6 +1,6 @@
 #WebSockets
 
-###Instal:
+###Install:
 Use composer :)
 
 ```php
