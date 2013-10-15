@@ -1,0 +1,21 @@
+{
+    "name": "nicklasos/websockets",
+    "type": "library",
+    "description": "Simple WebSocket implementation",
+    "repository": "https://github.com/nicklasos/websockets",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "nicklasos",
+            "email": "nicklasos@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "nicklasos": "src/"
+        }
+    }
+}
