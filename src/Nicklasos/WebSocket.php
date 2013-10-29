@@ -53,7 +53,7 @@ class WebSocket
                         continue;
                     }
 
-                    @socket_getpeername($socket_new, $ip);
+                    socket_getpeername($socket_new, $ip);
 
                     if (isset($this->events['open'])) {
                         $this->events['open']($this, $ip);
@@ -80,13 +80,13 @@ class WebSocket
                     break 2;
                 }
 
-                $buf = @socket_read($changed_socket, 1024, PHP_NORMAL_READ);
+                $buf = socket_read($changed_socket, 1024, PHP_NORMAL_READ);
 
                 // check disconnected client
                 if ($buf === false) {
 
                     $found_socket = array_search($changed_socket, $this->clients);
-                    @socket_getpeername($changed_socket, $ip);
+                    socket_getpeername($changed_socket, $ip);
                     unset($this->clients[$found_socket]);
 
                     if (isset($this->events['close'])) {
@@ -108,7 +108,7 @@ class WebSocket
         $response = $this->mask(json_encode($message));
 
         foreach($this->clients as $changed_socket) {
-            @socket_write($changed_socket, $response, strlen($response));
+            socket_write($changed_socket, $response, strlen($response));
         }
 
         return true;
